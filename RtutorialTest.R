@@ -7,7 +7,7 @@ mv_dat = mvrnorm(n, c(0,0), sigma)
 x2 = mv_dat[, 1]
 x3 = mv_dat[, 2]
 x = rbind(rep(1, n), x1, x2, x3)
-miu = beta %*% x
+miu = exp(beta %*% x)
 
 y = rep(-1, n)
 
